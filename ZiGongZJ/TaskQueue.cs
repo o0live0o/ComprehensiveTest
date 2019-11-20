@@ -191,8 +191,8 @@ namespace ZiGongZJ
                 yth.JCFFID = "14";
                 yth.BTGPFXZ = zyjs.stdVelK;
                 yth.BTGPFJG1 = zyjs.VelK1;
-                yth.BTGPFJG2 = zyjs.VelK12;
-                yth.BTGPFJG3 = zyjs.VelK13;
+                yth.BTGPFJG2 = zyjs.VelK2;
+                yth.BTGPFJG3 = zyjs.VelK3;
                 yth.BTGPFPJZ = zyjs.VelKAver;
                 yth.BTGDSZS = zyjs.dsRev;
                 yth.IGHJWD = zyjs.temperature;

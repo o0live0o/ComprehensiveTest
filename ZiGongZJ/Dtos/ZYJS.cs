@@ -12,8 +12,8 @@ namespace ZiGongZJ.Dtos
             JCFF = "";
             JCLSH = "";
             VelK1 = "";
-            VelK12 = "";
-            VelK13 = "";
+            VelK2 = "";
+            VelK3 = "";
             VelKAver = "";
             stdVelK = "";
             dsRev = "";
@@ -54,7 +54,7 @@ namespace ZiGongZJ.Dtos
         /// <summary>
         /// 获取或设置第二次值
         /// </summary>
-        public string VelK12
+        public string VelK2
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace ZiGongZJ.Dtos
         /// <summary>
         /// 获取或设置第三次值
         /// </summary>
-        public string VelK13
+        public string VelK3
         {
             get;
             set;
