@@ -176,9 +176,7 @@ namespace ZiGongZJ
         #region ClickEvents
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            CaptureUtils captureUtils = new CaptureUtils();
-            captureUtils.Capture("123456","01");
-            //ReadCarList();
+            ReadCarList();
         }
 
         private void tsbSetting_Click(object sender, EventArgs e)

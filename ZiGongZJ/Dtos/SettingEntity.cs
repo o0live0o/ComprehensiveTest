@@ -16,5 +16,7 @@ namespace ZiGongZJ.Dtos
         public string CameraUser { get; set; }
         public string CameraPort { get; set; }
         public string CameraPwd { get; set; }
+
+        public string WebService { get; set; }
     }
 }

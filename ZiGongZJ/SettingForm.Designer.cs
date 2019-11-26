@@ -38,11 +38,12 @@
             this.txtSharepath = new CI.Controls.FlatField();
             this.btnSelectPath = new System.Windows.Forms.Button();
             this.settingFiller = new CI.UIComponents.Filler.EntityFiller();
-            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.flatField5 = new CI.Controls.FlatField();
             this.flatField6 = new CI.Controls.FlatField();
             this.flatField7 = new CI.Controls.FlatField();
             this.flatField8 = new CI.Controls.FlatField();
+            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
+            this.flatField9 = new CI.Controls.FlatField();
             this.skinGroupBox1.SuspendLayout();
             this.skinGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +77,7 @@
             this.flatField4.Location = new System.Drawing.Point(9, 134);
             this.flatField4.Name = "flatField4";
             this.flatField4.PasswordChar = '*';
-            this.flatField4.Size = new System.Drawing.Size(357, 27);
+            this.flatField4.Size = new System.Drawing.Size(357, 23);
             this.flatField4.TabIndex = 3;
             // 
             // flatField3
@@ -88,7 +89,7 @@
             this.settingFiller.SetEntityField(this.flatField3, new CI.UIComponents.Filler.TextEntry("DataBaseUser", ""));
             this.flatField3.Location = new System.Drawing.Point(9, 97);
             this.flatField3.Name = "flatField3";
-            this.flatField3.Size = new System.Drawing.Size(357, 27);
+            this.flatField3.Size = new System.Drawing.Size(357, 23);
             this.flatField3.TabIndex = 2;
             // 
             // flatField2
@@ -100,7 +101,7 @@
             this.settingFiller.SetEntityField(this.flatField2, new CI.UIComponents.Filler.TextEntry("DataBase", ""));
             this.flatField2.Location = new System.Drawing.Point(9, 60);
             this.flatField2.Name = "flatField2";
-            this.flatField2.Size = new System.Drawing.Size(357, 27);
+            this.flatField2.Size = new System.Drawing.Size(357, 23);
             this.flatField2.TabIndex = 1;
             // 
             // flatField1
@@ -112,7 +113,7 @@
             this.settingFiller.SetEntityField(this.flatField1, new CI.UIComponents.Filler.TextEntry("DataBaseServer", ""));
             this.flatField1.Location = new System.Drawing.Point(9, 23);
             this.flatField1.Name = "flatField1";
-            this.flatField1.Size = new System.Drawing.Size(357, 27);
+            this.flatField1.Size = new System.Drawing.Size(357, 23);
             this.flatField1.TabIndex = 0;
             // 
             // btnSave
@@ -134,7 +135,7 @@
             this.settingFiller.SetEntityField(this.txtSharepath, new CI.UIComponents.Filler.TextEntry("ShareFilePath", ""));
             this.txtSharepath.Location = new System.Drawing.Point(27, 363);
             this.txtSharepath.Name = "txtSharepath";
-            this.txtSharepath.Size = new System.Drawing.Size(384, 27);
+            this.txtSharepath.Size = new System.Drawing.Size(384, 23);
             this.txtSharepath.TabIndex = 6;
             // 
             // btnSelectPath
@@ -147,10 +148,60 @@
             this.btnSelectPath.UseVisualStyleBackColor = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
             // 
+            // flatField5
+            // 
+            this.flatField5.BackColor = System.Drawing.Color.Transparent;
+            this.flatField5.Caption = "摄像头密码:";
+            this.flatField5.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flatField5.CaptionWidth = 0;
+            this.settingFiller.SetEntityField(this.flatField5, new CI.UIComponents.Filler.TextEntry("CameraPwd", ""));
+            this.flatField5.Location = new System.Drawing.Point(9, 134);
+            this.flatField5.Name = "flatField5";
+            this.flatField5.PasswordChar = '*';
+            this.flatField5.Size = new System.Drawing.Size(357, 23);
+            this.flatField5.TabIndex = 3;
+            // 
+            // flatField6
+            // 
+            this.flatField6.BackColor = System.Drawing.Color.Transparent;
+            this.flatField6.Caption = "摄像头用户名:";
+            this.flatField6.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flatField6.CaptionWidth = 0;
+            this.settingFiller.SetEntityField(this.flatField6, new CI.UIComponents.Filler.TextEntry("CameraUser", ""));
+            this.flatField6.Location = new System.Drawing.Point(9, 97);
+            this.flatField6.Name = "flatField6";
+            this.flatField6.Size = new System.Drawing.Size(357, 23);
+            this.flatField6.TabIndex = 2;
+            // 
+            // flatField7
+            // 
+            this.flatField7.BackColor = System.Drawing.Color.Transparent;
+            this.flatField7.Caption = "摄像头端口:";
+            this.flatField7.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flatField7.CaptionWidth = 0;
+            this.settingFiller.SetEntityField(this.flatField7, new CI.UIComponents.Filler.TextEntry("CameraPort", ""));
+            this.flatField7.Location = new System.Drawing.Point(9, 60);
+            this.flatField7.Name = "flatField7";
+            this.flatField7.Size = new System.Drawing.Size(357, 23);
+            this.flatField7.TabIndex = 1;
+            // 
+            // flatField8
+            // 
+            this.flatField8.BackColor = System.Drawing.Color.Transparent;
+            this.flatField8.Caption = "摄像头IP: ";
+            this.flatField8.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flatField8.CaptionWidth = 0;
+            this.settingFiller.SetEntityField(this.flatField8, new CI.UIComponents.Filler.TextEntry("CameraIP", ""));
+            this.flatField8.Location = new System.Drawing.Point(9, 23);
+            this.flatField8.Name = "flatField8";
+            this.flatField8.Size = new System.Drawing.Size(357, 23);
+            this.flatField8.TabIndex = 0;
+            // 
             // skinGroupBox2
             // 
             this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.skinGroupBox2.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox2.Controls.Add(this.flatField9);
             this.skinGroupBox2.Controls.Add(this.flatField5);
             this.skinGroupBox2.Controls.Add(this.flatField6);
             this.skinGroupBox2.Controls.Add(this.flatField7);
@@ -166,58 +217,21 @@
             this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Red;
             this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.White;
             // 
-            // flatField5
+            // flatField9
             // 
-            this.flatField5.BackColor = System.Drawing.Color.Transparent;
-            this.flatField5.Caption = "摄像头密码:";
-            this.flatField5.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flatField5.CaptionWidth = 0;
-            this.settingFiller.SetEntityField(this.flatField5, new CI.UIComponents.Filler.TextEntry("CameraPwd", ""));
-            this.flatField5.Location = new System.Drawing.Point(9, 134);
-            this.flatField5.Name = "flatField5";
-            this.flatField5.PasswordChar = '*';
-            this.flatField5.Size = new System.Drawing.Size(357, 27);
-            this.flatField5.TabIndex = 3;
-            // 
-            // flatField6
-            // 
-            this.flatField6.BackColor = System.Drawing.Color.Transparent;
-            this.flatField6.Caption = "摄像头用户名:";
-            this.flatField6.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flatField6.CaptionWidth = 0;
-            this.settingFiller.SetEntityField(this.flatField6, new CI.UIComponents.Filler.TextEntry("CameraUser", ""));
-            this.flatField6.Location = new System.Drawing.Point(9, 97);
-            this.flatField6.Name = "flatField6";
-            this.flatField6.Size = new System.Drawing.Size(357, 27);
-            this.flatField6.TabIndex = 2;
-            // 
-            // flatField7
-            // 
-            this.flatField7.BackColor = System.Drawing.Color.Transparent;
-            this.flatField7.Caption = "摄像头端口:";
-            this.flatField7.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flatField7.CaptionWidth = 0;
-            this.settingFiller.SetEntityField(this.flatField7, new CI.UIComponents.Filler.TextEntry("CameraPort", ""));
-            this.flatField7.Location = new System.Drawing.Point(9, 60);
-            this.flatField7.Name = "flatField7";
-            this.flatField7.Size = new System.Drawing.Size(357, 27);
-            this.flatField7.TabIndex = 1;
-            // 
-            // flatField8
-            // 
-            this.flatField8.BackColor = System.Drawing.Color.Transparent;
-            this.flatField8.Caption = "摄像头IP: ";
-            this.flatField8.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flatField8.CaptionWidth = 0;
-            this.settingFiller.SetEntityField(this.flatField8, new CI.UIComponents.Filler.TextEntry("CameraIP", ""));
-            this.flatField8.Location = new System.Drawing.Point(9, 23);
-            this.flatField8.Name = "flatField8";
-            this.flatField8.Size = new System.Drawing.Size(357, 27);
-            this.flatField8.TabIndex = 0;
+            this.flatField9.BackColor = System.Drawing.Color.Transparent;
+            this.flatField9.Caption = "Web       ";
+            this.flatField9.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flatField9.CaptionWidth = 0;
+            this.settingFiller.SetEntityField(this.flatField9, new CI.UIComponents.Filler.TextEntry("WebService", ""));
+            this.flatField9.Location = new System.Drawing.Point(9, 78);
+            this.flatField9.Name = "flatField9";
+            this.flatField9.Size = new System.Drawing.Size(357, 23);
+            this.flatField9.TabIndex = 4;
             // 
             // SettingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(453, 452);
@@ -254,5 +268,6 @@
         private CI.Controls.FlatField flatField6;
         private CI.Controls.FlatField flatField7;
         private CI.Controls.FlatField flatField8;
+        private CI.Controls.FlatField flatField9;
     }
 }
