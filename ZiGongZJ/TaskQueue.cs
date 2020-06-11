@@ -86,12 +86,16 @@ namespace ZiGongZJ
                 IniHelper.WriteIni("FILE_STATUS", "STATUS", "1", AppHelper.AppSetting.ShareFilePath + "DevStart.txt");
                 WaitResult = true;
                 Live0xUtils.LogUtils.TxtLog.Append(AppHelper.LogFolder + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", $"开始测试[{JCLSH}]……");
-                while (WaitResult && !File.Exists(AppHelper.AppSetting.ShareFilePath + "DevResult.txt")
-                    && !"1".Equals(IniHelper.ReadIni("FILE_STATUS", "STATUS", AppHelper.AppSetting.ShareFilePath + "DevResult.txt")))
+                Live0xUtils.LogUtils.TxtLog.Append(AppHelper.LogFolder + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", s.Replace("\r\n", " "));
+
+                string resultFilePath = Path.Combine(AppHelper.AppSetting.ShareFilePath, "DevResult.txt");
+
+                while (WaitResult && !File.Exists(resultFilePath)
+                    && !"1".Equals(IniHelper.ReadIni("FILE_STATUS", "STATUS", resultFilePath)))
                 {
                     Thread.Sleep(50);
                 }
-                if (File.Exists(AppHelper.AppSetting.ShareFilePath + "DevResult.txt") && "1".Equals(IniHelper.ReadIni("FILE_STATUS", "STATUS", AppHelper.AppSetting.ShareFilePath + "DevResult.txt")))
+                if (WaitResult)
                     ReadResult();
                 else
                     Live0xUtils.LogUtils.TxtLog.Append(AppHelper.LogFolder + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", $"取消读取结果[{JCLSH}]");
@@ -332,7 +336,7 @@ namespace ZiGongZJ
             }
             catch (Exception ex)
             {
-                File.WriteAllText("删除文件异常",ex.Message);
+                Live0xUtils.LogUtils.TxtLog.Append(AppHelper.LogFolder + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", "删除文件异常："+ex.Message);
             }
         }
 

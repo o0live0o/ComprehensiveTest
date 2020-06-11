@@ -72,7 +72,10 @@ namespace ZiGongZJ
             {
                 TaskQueue.ClearQueue();
                 TaskQueue.WaitResult = false;
-                YTH_V_CLLSXXB cllsxxb = MssqlHelper.GetInstance().Query<YTH_V_CLLSXXB>($"SELECT * FROM YTH_V_CLLSXXB WHERE JCLSH = '{vehilceQueue.jclsh}' ", null);
+                string sql = $"SELECT * FROM YTH_V_CLLSXXB WHERE JCLSH = @JCLSH ";
+                Hashtable paraHashtable = new Hashtable();
+                paraHashtable.Add("JCLSH", vehilceQueue.jclsh);
+                YTH_V_CLLSXXB cllsxxb = MssqlHelper.GetInstance().Query<YTH_V_CLLSXXB>(sql, paraHashtable);
                 TaskQueue.JCLSH = vehilceQueue.jclsh;
                 if (cllsxxb.zjjyxm.ToLower().Contains("hw"))
                 {
@@ -167,7 +170,7 @@ namespace ZiGongZJ
             m_stringBuilder.Append($"\r\nLGDNK=1.2");          // LUGDOWN K 限值（不检测可以不填）
             m_stringBuilder.Append($"\r\nLGDNNO=1500");       //  LUGDOWN NO 限值（不检测可以不填）
             m_stringBuilder.Append($"\r\nLGDNHP=0.4");         // 达标功率限值系数  信息中车辆的额定功率必须有（不检测可以不填
-            m_stringBuilder.Append($"\r\nYH_XZ={cllsxxb.EDYH}");
+            m_stringBuilder.Append($"\r\nYH_BZ={cllsxxb.EDYH}");
             m_stringBuilder.Append($"\r\nYH_SD={cllsxxb.YHSDD}"); 
             return m_stringBuilder.ToString();
         }
@@ -315,6 +318,7 @@ namespace ZiGongZJ
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Live0xUtils.LogUtils.TxtLog.Append(AppHelper.LogFolder + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", "关闭程序");
             TaskQueue.IsStartTask = false;
             TaskQueue.WaitResult = false;
             TaskQueue.m_ew.Set();
